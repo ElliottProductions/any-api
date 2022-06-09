@@ -1,9 +1,9 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
 
-DROP table if exists cats;
+DROP table if exists [planets];
 
-CREATE table cats (
+CREATE table planets (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR NOT NULL,
   type VARCHAR NOT NULL,
@@ -11,7 +11,7 @@ CREATE table cats (
   distance_from_sun INT NOT NULL,
   orbital_period_in_days INT NOT NULL);
 
-INSERT INTO cats (name, type, url, distance_from_sun, orbital_period_in_days) VALUES 
+INSERT INTO planets (name, type, url, distance_from_sun, orbital_period_in_days) VALUES 
 ('Mercury','terrestrial', 'https://cdn.mos.cms.futurecdn.net/PFQ97KNjjTebMzenT3GeKd-1200-80.jpg', 41.227, 88),
 ('Venus','terrestrial', 'https://cdn.mos.cms.futurecdn.net/RifjtkFLBEFgzkZqWEh69P.jpg', 67.24, 225),
 ('Earth','terrestrial', 'https://www.universetoday.com/wp-content/uploads/2009/09/bluemarble.jpg', 92.96, 365),
